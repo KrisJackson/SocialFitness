@@ -5,6 +5,6 @@ Staying active and working out is HARD especially when you're doing it alone! Ma
 
 This project is in its initial stage of development.
 
-![image]("Fitness/Screenshots/Opening.jpg")
+![image](https://github.com/KrisJackson/SocialFitness/blob/main/Fitness/Screenshots/Opening.jpg)
 
-![image]("Fitness/Screenshots/SignUp.jpg")
+![image](https://github.com/KrisJackson/SocialFitness/blob/main/Fitness/Screenshots/SignUp.jpg)
