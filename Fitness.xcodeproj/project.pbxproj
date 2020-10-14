@@ -38,6 +38,7 @@
 		18AFF1112537A25C009E3E42 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFF1102537A25C009E3E42 /* MainTabBarInteractor.swift */; };
 		18AFF1162537A26B009E3E42 /* MainTabBarError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFF1152537A26B009E3E42 /* MainTabBarError.swift */; };
 		18AFF11B2537A279009E3E42 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFF11A2537A279009E3E42 /* MainTabBarRouter.swift */; };
+		18AFF1272537AAEE009E3E42 /* AuthNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFF1262537AAEE009E3E42 /* AuthNavigationView.swift */; };
 		18B9B79D25323AE100747543 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9B79C25323AE100747543 /* SignUpView.swift */; };
 		18B9B7A525323B1400747543 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9B7A425323B1400747543 /* SignUpPresenter.swift */; };
 		18B9B7AA25323B2500747543 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9B7A925323B2500747543 /* SignUpInteractor.swift */; };
@@ -106,6 +107,7 @@
 		18AFF1102537A25C009E3E42 /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
 		18AFF1152537A26B009E3E42 /* MainTabBarError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarError.swift; sourceTree = "<group>"; };
 		18AFF11A2537A279009E3E42 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		18AFF1262537AAEE009E3E42 /* AuthNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationView.swift; sourceTree = "<group>"; };
 		18B9B79C25323AE100747543 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		18B9B7A425323B1400747543 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		18B9B7A925323B2500747543 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		18AFF0FD2537A0AA009E3E42 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				18AFF1252537AAB5009E3E42 /* AuthNavigation */,
 				182FDFF9252E4CE20008D5EC /* Opening */,
 				187BAED9252F6A000056B9D4 /* Login */,
 				187BAEDA252F6A130056B9D4 /* GetInfo */,
@@ -348,6 +351,14 @@
 				18AFF11A2537A279009E3E42 /* MainTabBarRouter.swift */,
 			);
 			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		18AFF1252537AAB5009E3E42 /* AuthNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				18AFF1262537AAEE009E3E42 /* AuthNavigationView.swift */,
+			);
+			path = AuthNavigation;
 			sourceTree = "<group>";
 		};
 		18B9B79B25323AD000747543 /* SignUp */ = {
@@ -662,6 +673,7 @@
 				187BAEDC252F6A370056B9D4 /* LoginView.swift in Sources */,
 				18AFF11B2537A279009E3E42 /* MainTabBarRouter.swift in Sources */,
 				187BAEEB252F980F0056B9D4 /* LoginRouter.swift in Sources */,
+				18AFF1272537AAEE009E3E42 /* AuthNavigationView.swift in Sources */,
 				187BAEE6252F98020056B9D4 /* LoginInteractor.swift in Sources */,
 				187BAEFF252FE94E0056B9D4 /* GetInfoInteractor.swift in Sources */,
 				182FDF9C252E4A240008D5EC /* SceneDelegate.swift in Sources */,

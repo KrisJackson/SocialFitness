@@ -312,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="1799" y="119"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Auth Navigation View-->
         <scene sceneID="slq-DQ-4au">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dAd-ZZ-UqM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AuthNavigationView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="dAd-ZZ-UqM" customClass="AuthNavigationView" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dwT-Cm-ADw">
                         <autoresizingMask key="autoresizingMask"/>

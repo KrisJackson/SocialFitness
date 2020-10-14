@@ -24,7 +24,7 @@ class GetInfoRouter {
         switch destination {
         case .signUp:
             
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
             let vc = storyboard.instantiateViewController(withIdentifier: "SignUpView") as! SignUpView
             if let user: UserStore = data as? UserStore { vc.user = user }
             self.presenter?.view.navigationController?.pushViewController(vc, animated: true)

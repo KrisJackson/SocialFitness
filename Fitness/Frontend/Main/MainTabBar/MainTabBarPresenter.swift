@@ -25,4 +25,11 @@ class MainTabBarPresenter {
         
     }
     
+    // MARK: - ROUTER
+    
+    func routeToAuth() {
+        self.router.route(to: .auth)
+    }
+    
 }
+

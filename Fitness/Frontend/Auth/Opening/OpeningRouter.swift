@@ -24,14 +24,14 @@ class OpeningRouter {
         switch destination {
         case .login:
             
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginView") as! LoginView
             self.presenter?.view.navigationController?.pushViewController(vc, animated: true)
             break
             
         case .getInfo:
             
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
             let vc = storyboard.instantiateViewController(withIdentifier: "GetInfoView") as! GetInfoView
             self.presenter?.view.navigationController?.pushViewController(vc, animated: true)
             break
