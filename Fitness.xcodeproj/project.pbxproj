@@ -20,6 +20,7 @@
 		182FE012252E4D840008D5EC /* OpeningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE011252E4D840008D5EC /* OpeningRouter.swift */; };
 		182FE01C252E4DF20008D5EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE01B252E4DF20008D5EC /* Colors.swift */; };
 		182FE05D252E7EDC0008D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182FE05C252E7EDC0008D5EC /* GoogleService-Info.plist */; };
+		184BFF37253887890091C05E /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BFF36253887890091C05E /* LoginError.swift */; };
 		187BAEDC252F6A370056B9D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BAEDB252F6A370056B9D4 /* LoginView.swift */; };
 		187BAEE1252F97F70056B9D4 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BAEE0252F97F70056B9D4 /* LoginPresenter.swift */; };
 		187BAEE6252F98020056B9D4 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BAEE5252F98020056B9D4 /* LoginInteractor.swift */; };
@@ -89,6 +90,7 @@
 		182FE011252E4D840008D5EC /* OpeningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningRouter.swift; sourceTree = "<group>"; };
 		182FE01B252E4DF20008D5EC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		182FE05C252E7EDC0008D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		184BFF36253887890091C05E /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		187BAEDB252F6A370056B9D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		187BAEE0252F97F70056B9D4 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		187BAEE5252F98020056B9D4 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				187BAEDB252F6A370056B9D4 /* LoginView.swift */,
 				187BAEE0252F97F70056B9D4 /* LoginPresenter.swift */,
 				187BAEE5252F98020056B9D4 /* LoginInteractor.swift */,
+				184BFF36253887890091C05E /* LoginError.swift */,
 				187BAEEA252F980F0056B9D4 /* LoginRouter.swift */,
 			);
 			path = Login;
@@ -671,6 +674,7 @@
 				18AFF10C2537A24F009E3E42 /* MainTabBarPresenter.swift in Sources */,
 				187BAEF5252FDC4B0056B9D4 /* GetInfoView.swift in Sources */,
 				187BAEDC252F6A370056B9D4 /* LoginView.swift in Sources */,
+				184BFF37253887890091C05E /* LoginError.swift in Sources */,
 				18AFF11B2537A279009E3E42 /* MainTabBarRouter.swift in Sources */,
 				187BAEEB252F980F0056B9D4 /* LoginRouter.swift in Sources */,
 				18AFF1272537AAEE009E3E42 /* AuthNavigationView.swift in Sources */,

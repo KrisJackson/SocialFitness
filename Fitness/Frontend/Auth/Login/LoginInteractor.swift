@@ -16,7 +16,22 @@ class LoginInteractor {
     }
     
     func login(withEmail email: String, password: String) {
-        print("login")
+        
+        if (email.isEmpty || password.isEmpty) {
+            self.presenter?.onLogInError(LoginError.empty)
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (auth, error) in
+            if let error = error {
+                self.presenter?.onLogInError(error)
+                return
+            }
+            
+            // Success! Get user info
+            
+        }
+        
     }
     
 }

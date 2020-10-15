@@ -25,9 +25,21 @@ class LoginPresenter {
         
     }
     
-    func login(withEmail email: String, password: String) {
+    // MARK: - Log In User
+    
+    func logIn(withEmail email: String, password: String) {
         self.interactor.login(withEmail: email, password: password)
     }
+    
+    func onLogInSuccess(withUser user: UserStore) {
+        
+    }
+    
+    func onLogInError(_ error: Error) {
+        self.view.onError(error)
+    }
+    
+    // MARK: - ROUTER FUNCTIONS
     
     func routeToPreviousPage() {
         self.router.route(to: .previous)

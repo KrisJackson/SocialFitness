@@ -189,8 +189,35 @@ class LoginView: UIViewController {
             .trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextFieldView.text?
             .trimmingCharacters(in: .whitespacesAndNewlines)
-        self.presenter.login(withEmail: (email ?? ""), password: (password ?? ""))
         
+        self.presenter.logIn(withEmail: (email ?? ""), password: (password ?? ""))
+        
+    }
+    
+}
+
+// MARK: - Presenter Response
+
+extension LoginView {
+    
+    func onSuccess(user: UserStore) {
+        /// Animate error transition
+        UIView.animate(withDuration: 0.2) {
+            self.errorLabelView.text = ""
+            self.view.layoutIfNeeded()
+        }
+        
+        print("The user is signed in with email \(user.email ?? "")")
+        
+    }
+    
+    func onError(_ error: Error) {
+        Vibration.vibrate(type: .error)
+        /// Animate error transition
+        UIView.animate(withDuration: 0.2) {
+            self.errorLabelView.text = error.localizedDescription
+            self.view.layoutIfNeeded()
+        }
     }
     
 }
