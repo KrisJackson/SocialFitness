@@ -260,7 +260,7 @@ extension SignUpView {
             self.view.layoutIfNeeded()
         }
         
-//        self.presenter.routeToSignUp(withUser: user)
+        self.presenter.routeToHome()
     }
     
     func onError(_ error: Error) {

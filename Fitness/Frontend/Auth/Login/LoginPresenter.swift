@@ -32,7 +32,7 @@ class LoginPresenter {
     }
     
     func onLogInSuccess(withUser user: UserStore) {
-        
+        self.view.onSuccess(user: user)
     }
     
     func onLogInError(_ error: Error) {

@@ -49,5 +49,8 @@ class SignUpPresenter {
         self.router.route(to: .previous)
     }
     
+    func routeToHome() {
+        self.router.route(to: .dismiss)
+    }
     
 }

@@ -167,7 +167,6 @@ class SignUpInteractor {
                 UserDefaults.standard.set(user.email, forKey: "email")
                 UserDefaults.standard.set(user.created, forKey: "created")
                 UserDefaults.standard.set(user.username, forKey: "username")
-                UserDefaults.standard.set(user.reference, forKey: "reference")
                 UserDefaults.standard.set(user.dateOfBirth, forKey: "dateOfBirth")
                 
                 /// Complete with no error
