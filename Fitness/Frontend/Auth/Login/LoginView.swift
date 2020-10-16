@@ -208,8 +208,8 @@ extension LoginView {
             self.view.layoutIfNeeded()
         }
         
-        print("The user is signed in with email \(user.email ?? "") and username \(user.username ?? "")")
-        self.presenter?.dismiss()
+        print("Success - Email: \(user.email ?? ""); Username: \(user.username ?? "")")
+        self.presenter.dismiss()
         
     }
     
