@@ -20,7 +20,7 @@ class OpeningRouter {
         self.presenter = delegate
     }
     
-    func route(to destination: Destination) {
+    func route(to destination: Destination, withData data: Any? = nil) {
         switch destination {
         case .login:
             

@@ -201,6 +201,7 @@ class LoginView: UIViewController {
 extension LoginView {
     
     func onSuccess(user: UserStore) {
+        
         /// Animate error transition
         UIView.animate(withDuration: 0.2) {
             self.errorLabelView.text = ""
@@ -208,6 +209,7 @@ extension LoginView {
         }
         
         print("The user is signed in with email \(user.email ?? "") and username \(user.username ?? "")")
+        self.presenter?.dismiss()
         
     }
     

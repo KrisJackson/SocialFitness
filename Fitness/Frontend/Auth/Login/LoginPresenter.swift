@@ -45,4 +45,7 @@ class LoginPresenter {
         self.router.route(to: .previous)
     }
     
+    func dismiss() {
+        self.router.route(to: .dismiss)
+    }
 }
