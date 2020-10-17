@@ -20,6 +20,7 @@
 		182FE012252E4D840008D5EC /* OpeningRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE011252E4D840008D5EC /* OpeningRouter.swift */; };
 		182FE01C252E4DF20008D5EC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE01B252E4DF20008D5EC /* Colors.swift */; };
 		182FE05D252E7EDC0008D5EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 182FE05C252E7EDC0008D5EC /* GoogleService-Info.plist */; };
+		1836B8E9253A064700D94232 /* TabBarSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1836B8E8253A064700D94232 /* TabBarSlideAnimation.swift */; };
 		184BFF37253887890091C05E /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BFF36253887890091C05E /* LoginError.swift */; };
 		187BAEDC252F6A370056B9D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BAEDB252F6A370056B9D4 /* LoginView.swift */; };
 		187BAEE1252F97F70056B9D4 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187BAEE0252F97F70056B9D4 /* LoginPresenter.swift */; };
@@ -90,6 +91,7 @@
 		182FE011252E4D840008D5EC /* OpeningRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningRouter.swift; sourceTree = "<group>"; };
 		182FE01B252E4DF20008D5EC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		182FE05C252E7EDC0008D5EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1836B8E8253A064700D94232 /* TabBarSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSlideAnimation.swift; sourceTree = "<group>"; };
 		184BFF36253887890091C05E /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 		187BAEDB252F6A370056B9D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		187BAEE0252F97F70056B9D4 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -284,6 +286,14 @@
 			path = _Shared;
 			sourceTree = "<group>";
 		};
+		1836B8E7253A063200D94232 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1836B8E8253A064700D94232 /* TabBarSlideAnimation.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		187BAED9252F6A000056B9D4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +357,7 @@
 		18AFF0FF2537A0D6009E3E42 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				1836B8E7253A063200D94232 /* Helper */,
 				18AFF1062537A235009E3E42 /* MainTabBarView.swift */,
 				18AFF10B2537A24F009E3E42 /* MainTabBarPresenter.swift */,
 				18AFF1102537A25C009E3E42 /* MainTabBarInteractor.swift */,
@@ -668,6 +679,7 @@
 				187BAF0D25308FFA0056B9D4 /* UserStore.swift in Sources */,
 				18AFF1072537A235009E3E42 /* MainTabBarView.swift in Sources */,
 				18B9B7B725323B3E00747543 /* SignUpRouter.swift in Sources */,
+				1836B8E9253A064700D94232 /* TabBarSlideAnimation.swift in Sources */,
 				187BAEF0252F9ABD0056B9D4 /* KeyWindow.swift in Sources */,
 				18AFF1162537A26B009E3E42 /* MainTabBarError.swift in Sources */,
 				18B9B7AA25323B2500747543 /* SignUpInteractor.swift in Sources */,

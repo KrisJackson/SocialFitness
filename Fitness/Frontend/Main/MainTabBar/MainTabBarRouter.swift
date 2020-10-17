@@ -24,8 +24,9 @@ class MainTabBarRouter {
         case .auth:
             let storyboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
             let vc = storyboard.instantiateViewController(withIdentifier: "AuthNavigationView") as! AuthNavigationView
+            vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .fullScreen
-            self.presenter?.view.present(vc, animated: false, completion: nil)
+            self.presenter?.view.present(vc, animated: true, completion: nil)
             break
         }
     }

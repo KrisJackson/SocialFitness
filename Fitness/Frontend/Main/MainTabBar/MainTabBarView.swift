@@ -13,6 +13,7 @@ class MainTabBarView: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         
     }
     
