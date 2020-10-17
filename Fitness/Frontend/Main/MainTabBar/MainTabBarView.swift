@@ -15,6 +15,12 @@ class MainTabBarView: UITabBarController {
         super.viewDidLoad()
         self.delegate = self
         
+        // Configure tabbar
+        let appearance = tabBar.standardAppearance
+        appearance.backgroundColor = .white
+        appearance.stackedLayoutAppearance.normal.iconColor = .black
+        appearance.stackedLayoutAppearance.selected.iconColor = .black
+        self.tabBar.standardAppearance = appearance
     }
     
     override func viewDidAppear(_ animated: Bool) {
