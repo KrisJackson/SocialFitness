@@ -27,9 +27,13 @@ class TabBarView: UITabBarController {
         super.viewDidAppear(animated)
         
         // Go to authentication if there is no user
-        guard let _: User = Auth.auth().currentUser else {
+        guard let user: User = Auth.auth().currentUser else {
             self.presenter.routeToAuth()
             return
+        }
+        
+        if !user.isEmailVerified {
+            // Verify user's email
         }
         
         

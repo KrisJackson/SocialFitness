@@ -59,7 +59,7 @@ class LoginView: UIViewController {
         errorLabelView.text = nil
         errorLabelView.numberOfLines = 5
         errorLabelView.textColor = UIColor.systemPink
-        errorLabelView.font = .systemFont(ofSize: 14, weight: .medium)
+        errorLabelView.font = .systemFont(ofSize: 16, weight: .medium)
         
         /// Configure header label
         headerLabelView.numberOfLines = 1
@@ -184,6 +184,12 @@ class LoginView: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
+        
+        /// Animate error transition
+        UIView.animate(withDuration: 0.2) {
+            self.errorLabelView.text = ""
+            self.view.layoutIfNeeded()
+        }
         
         let email = emailTextFieldView.text?
             .trimmingCharacters(in: .whitespacesAndNewlines)
