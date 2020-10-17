@@ -298,12 +298,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1836B8FF253A938100D94232 /* _Post */ = {
+		1836B8FF253A938100D94232 /* Post */ = {
 			isa = PBXGroup;
 			children = (
 				1836B900253A9F5000D94232 /* PostView.swift */,
 			);
-			path = _Post;
+			path = Post;
 			sourceTree = "<group>";
 		};
 		187A520E253B36D00070A23A /* Home */ = {
@@ -369,14 +369,14 @@
 		18AFF0FE2537A0CE009E3E42 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1836B8FF253A938100D94232 /* _Post */,
-				18AFF0FF2537A0D6009E3E42 /* TabBar */,
+				18AFF0FF2537A0D6009E3E42 /* _TabBar */,
 				187A520E253B36D00070A23A /* Home */,
+				1836B8FF253A938100D94232 /* Post */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		18AFF0FF2537A0D6009E3E42 /* TabBar */ = {
+		18AFF0FF2537A0D6009E3E42 /* _TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				1836B8F8253A85A900D94232 /* Helpers */,
@@ -386,7 +386,7 @@
 				18AFF1152537A26B009E3E42 /* TabBarError.swift */,
 				18AFF11A2537A279009E3E42 /* TabBarRouter.swift */,
 			);
-			path = TabBar;
+			path = _TabBar;
 			sourceTree = "<group>";
 		};
 		18AFF1252537AAB5009E3E42 /* AuthNavigation */ = {
