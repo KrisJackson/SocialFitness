@@ -36,10 +36,6 @@ class SignUpView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(user.name ?? "nil user")
-        print(user.email ?? "nil user")
-        print(user.dateOfBirth ?? "nil user")
-        
         /// Configure super view
         /// Add rounded corners to iPhone X family
         if keyWindow?.safeAreaInsets.bottom ?? 0 > 0 {
@@ -237,17 +233,44 @@ extension SignUpView {
             self.view.layoutIfNeeded()
         }
         
-//        let name = usernameTextFieldView.text?
-//            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-//        let email = passwordTextFieldView.text?
-//            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-//        let date = confirmTextFieldView.text?
-//            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-//
-//        self.presenter.collect(name: name, email: email, dateOfBirth: date)
+        user.created = NSDate().timeIntervalSince1970
+        user.username = usernameTextFieldView.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let password = passwordTextFieldView.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let confirmPassword = confirmTextFieldView.text?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+
+        self.presenter.signUp(user: user, password: password, confirmPassword: confirmPassword)
  
     }
     
+    
+}
+
+
+// MARK: - Presenter Response
+
+extension SignUpView {
+    
+    func onSuccess(user: UserStore) {
+        /// Animate error transition
+        UIView.animate(withDuration: 0.2) {
+            self.errorLabelView.text = ""
+            self.view.layoutIfNeeded()
+        }
+        
+        self.presenter.routeToHome()
+    }
+    
+    func onError(_ error: Error) {
+        Vibration.vibrate(type: .error)
+        /// Animate error transition
+        UIView.animate(withDuration: 0.2) {
+            self.errorLabelView.text = error.localizedDescription
+            self.view.layoutIfNeeded()
+        }
+    }
     
 }
 

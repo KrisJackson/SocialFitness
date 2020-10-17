@@ -26,6 +26,22 @@ class SignUpPresenter {
     }
     
     
+    // MARK: - Collect Data
+    
+    
+    func signUp(user: UserStore, password: String, confirmPassword confirm: String) {
+        self.interactor.signUp(user: user, password: password, confirmPassword: confirm)
+    }
+    
+    func onSignUpSuccess(withUser user: UserStore) {
+        self.view.onSuccess(user: user)
+    }
+    
+    func onSignUpError(_ error: Error) {
+        self.view.onError(error)
+    }
+    
+    
     // MARK: - ROUTER FUNCTIONS
     
     
@@ -33,5 +49,8 @@ class SignUpPresenter {
         self.router.route(to: .previous)
     }
     
+    func routeToHome() {
+        self.router.route(to: .dismiss)
+    }
     
 }

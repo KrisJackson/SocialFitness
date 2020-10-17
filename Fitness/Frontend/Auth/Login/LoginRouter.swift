@@ -11,6 +11,7 @@ class LoginRouter {
     
     enum Destination {
         case previous
+        case dismiss
     }
     
     private var presenter: LoginPresenter?
@@ -19,10 +20,14 @@ class LoginRouter {
         self.presenter = delegate
     }
     
-    func route(to destination: Destination) {
+    func route(to destination: Destination, withData data: Any? = nil) {
         switch destination {
         case .previous:
             self.presenter?.view.navigationController?.popViewController(animated: true)
+            break
+            
+        case .dismiss:
+            self.presenter?.view.dismiss(animated: true, completion: nil)
             break
         }
     }
