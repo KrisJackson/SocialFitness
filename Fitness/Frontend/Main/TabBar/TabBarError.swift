@@ -1,5 +1,5 @@
 //
-//  MainTabBarError.swift
+//  TabBarError.swift
 //  Fitness
 //
 //  Created by Kristopher Jackson on 10/14/20.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension MainTabBarInteractor {
+extension TabBarInteractor {
 
-    enum MainTabBarError: Error, LocalizedError {
+    enum TabBarError: Error, LocalizedError {
         
         
     }

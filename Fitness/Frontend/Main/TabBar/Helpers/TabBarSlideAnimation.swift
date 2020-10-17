@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension MainTabBarView: UITabBarControllerDelegate {
+extension TabBarView: UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         

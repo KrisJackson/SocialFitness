@@ -1,5 +1,5 @@
 //
-//  MainTabBarRouter.swift
+//  TabBarRouter.swift
 //  Fitness
 //
 //  Created by Kristopher Jackson on 10/14/20.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-class MainTabBarRouter {
+class TabBarRouter {
     
     enum Destination {
         case auth
     }
     
-    private var presenter: MainTabBarPresenter?
+    private var presenter: TabBarPresenter?
     
-    required init(from delegate: MainTabBarPresenter) {
+    required init(from delegate: TabBarPresenter) {
         self.presenter = delegate
     }
     

@@ -1,5 +1,5 @@
 //
-//  MainTabBarView.swift
+//  TabBarView.swift
 //  Fitness
 //
 //  Created by Kristopher Jackson on 10/14/20.
@@ -7,9 +7,9 @@
 
 import Firebase
 
-class MainTabBarView: UITabBarController {
+class TabBarView: UITabBarController {
     
-    lazy var presenter: MainTabBarPresenter = MainTabBarPresenter(from: self)
+    lazy var presenter: TabBarPresenter = TabBarPresenter(from: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
