@@ -34,7 +34,7 @@
                                         <state key="normal">
                                             <imageReference key="image" image="paperplane" catalog="system" symbolScale="default"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default" weight="regular">
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             </preferredSymbolConfiguration>
                                         </state>
                                         <connections>
@@ -47,7 +47,7 @@
                                         <state key="normal">
                                             <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default" weight="regular">
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             </preferredSymbolConfiguration>
                                         </state>
                                         <connections>

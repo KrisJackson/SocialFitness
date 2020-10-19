@@ -9,6 +9,11 @@ import Foundation
 
 class WorkoutInteractor {
     
+    var presenter: WorkoutPresenter?
+    
+    required init(from delegate: WorkoutPresenter) {
+        self.presenter = delegate
+    }
     
     
 }
