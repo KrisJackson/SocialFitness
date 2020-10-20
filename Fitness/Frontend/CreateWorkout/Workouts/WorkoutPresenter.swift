@@ -56,8 +56,8 @@ class WorkoutPresenter {
         self.router.route(to: .previous)
     }
     
-    func routeToWorkoutInfo() {
-        self.router.route(to: .workoutInfo)
+    func routeToWorkoutInfo(withData data: Workouts.ID) {
+        self.router.route(to: .workoutInfo, withData: data)
     }
 
 }

@@ -47,6 +47,9 @@ class WorkoutView: UIViewController {
         self.continueButton.setTitleColor(.white, for: .normal)
         self.continueButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
         
+        /// Enables 'slide to dismiss' for views added to stack
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+    
     }
     
 }
@@ -105,6 +108,29 @@ extension WorkoutView {
     
     @IBAction func cancelPressed(_ sender: Any) {
         self.presenter.routeToPrevious()
+    }
+    
+    @IBAction func continuePressed(_ sender: Any) {
+        guard let selected = self.selected else {
+            return
+        }
+        self.presenter.routeToWorkoutInfo(withData: selected)
+    }
+    
+}
+
+
+// MARK: - UIGesture Recognizer Delegate
+
+
+extension WorkoutView: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        /// Prevents 'slide to dismis' for view on the root of stack
+        if(navigationController!.viewControllers.count > 1) {
+            return true
+        }
+        return false
     }
     
 }
