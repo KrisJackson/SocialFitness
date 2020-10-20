@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C748BA4AF5CB67BFAE3C61E /* Pods_FitnessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F59960FDC282A13E5F115F /* Pods_FitnessTests.framework */; };
 		180D3D8C253DC9CA000C9BFA /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D3D8B253DC9CA000C9BFA /* Workouts.swift */; };
-		180D3DAB253F4BFC000C9BFA /* CreateWorkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 180D3DAA253F4BFC000C9BFA /* CreateWorkout.png */; };
+		180D3DAB253F4BFC000C9BFA /* CreateWorkout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 180D3DAA253F4BFC000C9BFA /* CreateWorkout.jpg */; };
 		180D8F25253B862A0067EAAC /* WorkoutNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D8F24253B862A0067EAAC /* WorkoutNavView.swift */; };
 		180D8F32253B868C0067EAAC /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D8F31253B868C0067EAAC /* MessageView.swift */; };
 		18264714253C7B8D009F7180 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18264713253C7B8D009F7180 /* WorkoutCell.swift */; };
@@ -90,7 +90,7 @@
 /* Begin PBXFileReference section */
 		1383F6668DA302D7AA139CD1 /* Pods-FitnessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessTests.release.xcconfig"; path = "Target Support Files/Pods-FitnessTests/Pods-FitnessTests.release.xcconfig"; sourceTree = "<group>"; };
 		180D3D8B253DC9CA000C9BFA /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
-		180D3DAA253F4BFC000C9BFA /* CreateWorkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreateWorkout.png; sourceTree = "<group>"; };
+		180D3DAA253F4BFC000C9BFA /* CreateWorkout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CreateWorkout.jpg; sourceTree = "<group>"; };
 		180D8F24253B862A0067EAAC /* WorkoutNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutNavView.swift; sourceTree = "<group>"; };
 		180D8F31253B868C0067EAAC /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		18264713253C7B8D009F7180 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 			children = (
 				18C49E19253391C100E08AEE /* Opening.jpg */,
 				18C49E1A253391C100E08AEE /* SignUp.jpg */,
-				180D3DAA253F4BFC000C9BFA /* CreateWorkout.png */,
+				180D3DAA253F4BFC000C9BFA /* CreateWorkout.jpg */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -628,7 +628,7 @@
 			files = (
 				18AFF0F525379D74009E3E42 /* Main.storyboard in Resources */,
 				182FE05D252E7EDC0008D5EC /* GoogleService-Info.plist in Resources */,
-				180D3DAB253F4BFC000C9BFA /* CreateWorkout.png in Resources */,
+				180D3DAB253F4BFC000C9BFA /* CreateWorkout.jpg in Resources */,
 				18E199C12530B65D00B57E37 /* LaunchScreen.storyboard in Resources */,
 				182FDFA3252E4A250008D5EC /* Assets.xcassets in Resources */,
 				182D703D253B765600C6BA09 /* Workout.storyboard in Resources */,
