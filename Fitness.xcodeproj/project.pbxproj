@@ -799,6 +799,7 @@
 				182D702E253B74F700C6BA09 /* WorkoutInteractor.swift in Sources */,
 				187BAEE1252F97F70056B9D4 /* LoginPresenter.swift in Sources */,
 				187BAF1B253094210056B9D4 /* GetInfoErrors.swift in Sources */,
+				182D7038253B750B00C6BA09 /* WorkoutErrors.swift in Sources */,
 				187A5210253B36F30070A23A /* HomeView.swift in Sources */,
 				187BAF04252FE9580056B9D4 /* GetInfoRouter.swift in Sources */,
 				182D7033253B750100C6BA09 /* WorkoutRouter.swift in Sources */,
