@@ -9,11 +9,11 @@ import UIKit
 
 class WorkoutCell: UICollectionViewCell {
     
+    static let reuseId = "WorkoutCell"
+    
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    static let reuseId = "WorkoutCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

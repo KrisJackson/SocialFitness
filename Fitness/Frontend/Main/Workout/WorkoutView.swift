@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct WorkoutType {
-    var name: String!
-    var emoji: String!
-}
-
 class WorkoutView: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -19,21 +14,7 @@ class WorkoutView: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let workouts: [WorkoutType] = [
-        .init(name: "Run", emoji: "🏃‍♂️"),
-        .init(name: "Bike", emoji: "🚴‍♂️"),
-        .init(name: "Lift", emoji: "🏋️‍♀️"),
-        .init(name: "Swim", emoji: "🏊"),
-        .init(name: "Walk", emoji: "🚶‍♀️"),
-        .init(name: "Yoga", emoji: "🤸‍♂️"),
-        .init(name: "Sprint", emoji: "🏃‍♀️"),
-        .init(name: "Meditate", emoji: "🧘‍♂️"),
-        .init(name: "Crossfit", emoji: "🏋️"),
-        .init(name: "Cardio", emoji: "❤️"),
-        .init(name: "Hike", emoji: "🥾"),
-        .init(name: "Strength", emoji: "💪")
-    ]
-    
+    var selected: Workouts.ID? = nil
     lazy var presenter = WorkoutPresenter(from: self)
     
     override func viewDidLoad() {
@@ -59,8 +40,9 @@ class WorkoutView: UIViewController {
         self.subHeaderLabel.text = "Select the type of workout that you would like to create."
         
         // Configure continue button
+        self.continueButton.isEnabled = false
+        self.continueButton.backgroundColor = #colorLiteral(red: 1, green: 0.2156862745, blue: 0.3725490196, alpha: 0.5)
         self.continueButton.layer.cornerRadius = 12
-        self.continueButton.backgroundColor = .systemPink
         self.continueButton.setTitle("Continue", for: .normal)
         self.continueButton.setTitleColor(.white, for: .normal)
         self.continueButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
@@ -75,16 +57,21 @@ class WorkoutView: UIViewController {
 extension WorkoutView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return workouts.count
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return Workouts.list.count
     }
     
     
-    func collectionView(_ collectionView: UICollectionView,cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WorkoutCell.reuseId, for: indexPath) as! WorkoutCell
-        cell.iconLabel.text = workouts[indexPath.item].emoji
-        cell.nameLabel.text = workouts[indexPath.item].name
+        self.presenter.populateData(for: cell, at: indexPath.item)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter.select(self.collectionView, at: indexPath.item)
     }
     
 }
@@ -95,13 +82,17 @@ extension WorkoutView: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension WorkoutView: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let cellsPerRow: CGFloat = 2
         let sidePadding: CGFloat = 20 * 2
         let spaceBetweenCell: CGFloat = 10
         
         let cellWidth: CGFloat = (view.frame.width - (sidePadding + spaceBetweenCell)) / cellsPerRow
         return CGSize(width: cellWidth, height: cellWidth)
+        
     }
     
 }
@@ -114,6 +105,36 @@ extension WorkoutView {
     
     @IBAction func cancelPressed(_ sender: Any) {
         self.presenter.routeToPrevious()
+    }
+    
+}
+
+
+// MARK: - Presenter Functions
+
+extension WorkoutView {
+    
+    func onSelect(selected: Workouts.ID?) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2) {
+            self.continueButton.isEnabled = true
+            self.continueButton.backgroundColor = .systemPink
+            self.view.layoutIfNeeded()
+        }
+        self.selected = selected
+        self.collectionView.reloadData()
+    }
+    
+    func cellIsSelected(_ cell: WorkoutCell) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.2) {
+            cell.backView.backgroundColor = #colorLiteral(red: 1, green: 0.2156862745, blue: 0.3725490196, alpha: 0.3)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func cellNotSelected(_ cell: WorkoutCell) {
+        cell.backView.backgroundColor = .secondarySystemBackground
     }
     
 }
