@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="afv-dy-Vif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="afv-dy-Vif">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -34,9 +34,12 @@
                                         <state key="normal">
                                             <imageReference key="image" image="paperplane" catalog="system" symbolScale="default"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default" weight="regular">
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             </preferredSymbolConfiguration>
                                         </state>
+                                        <connections>
+                                            <action selector="messagePressed:" destination="PNx-dK-kwn" eventType="touchUpInside" id="0iv-ij-UUo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lq-ul-PIL">
                                         <rect key="frame" x="20" y="52" width="40" height="40"/>
@@ -44,9 +47,12 @@
                                         <state key="normal">
                                             <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default" weight="regular">
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             </preferredSymbolConfiguration>
                                         </state>
+                                        <connections>
+                                            <action selector="workoutPressed:" destination="PNx-dK-kwn" eventType="touchUpInside" id="QEz-gl-xOZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,11 +79,17 @@
                             <constraint firstItem="TzO-ZW-uRj" firstAttribute="leading" secondItem="d5L-L5-yZN" secondAttribute="leading" id="pAp-DD-SOR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="wuT-eP-NB8"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="DRr-Qt-DW6"/>
+                    <navigationItem key="navigationItem" id="eH7-AM-4Sr"/>
+                    <connections>
+                        <outlet property="logoImage" destination="AtN-FX-VkQ" id="qge-zw-ppt"/>
+                        <outlet property="messageButton" destination="Agc-8B-4kd" id="1nI-Rk-VQ9"/>
+                        <outlet property="workoutButton" destination="8Lq-ul-PIL" id="wAB-xI-S3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcm-AP-mrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1768.1159420289857" y="839.73214285714278"/>
+            <point key="canvasLocation" x="-1790" y="840"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TcQ-8R-p7E">
@@ -93,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuW-EU-QXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="840"/>
+            <point key="canvasLocation" x="1597" y="840"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hNX-0P-ANe">
@@ -109,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7k-DY-qTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="840"/>
+            <point key="canvasLocation" x="-935" y="840"/>
         </scene>
         <!--Tab Bar View-->
         <scene sceneID="Mrz-CS-tdo">
@@ -122,7 +134,7 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PNx-dK-kwn" kind="relationship" relationship="viewControllers" id="dKG-8j-PYL"/>
+                        <segue destination="PNx-dK-kwn" kind="relationship" relationship="viewControllers" id="AXg-VK-udg"/>
                         <segue destination="BrN-Ns-8T6" kind="relationship" relationship="viewControllers" id="LFD-bh-a2R"/>
                         <segue destination="4y3-0p-Rnb" kind="relationship" relationship="viewControllers" id="WXw-s0-etg"/>
                         <segue destination="coW-s0-WQ3" kind="relationship" relationship="viewControllers" id="cpR-tj-plZ"/>
@@ -147,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Es6-H2-3Lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="840"/>
+            <point key="canvasLocation" x="791" y="840"/>
         </scene>
         <!--Post View-->
         <scene sceneID="j6T-R3-9r0">

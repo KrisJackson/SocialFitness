@@ -9,21 +9,46 @@ import UIKit
 
 class HomeView: UIViewController {
 
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var workoutButton: UIButton!
+    @IBOutlet weak var messageButton: UIButton!
+    
+    lazy var presenter = HomePresenter(from: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Configure logo
+        self.logoImage.tintColor = .systemPink
+        self.logoImage.contentMode = .scaleAspectFit
+        self.logoImage.image = UIImage(systemName: "leaf.fill")
 
-        // Do any additional setup after loading the view.
+        // Configure create button
+        self.workoutButton.tintColor = .black
+        self.workoutButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        self.workoutButton.setPreferredSymbolConfiguration(
+            .init(pointSize: 22, weight: .regular), forImageIn: .normal)
+        
+        // Configure message button
+        self.messageButton.tintColor = .black
+        self.messageButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        self.messageButton.setPreferredSymbolConfiguration(
+            .init(pointSize: 22, weight: .regular), forImageIn: .normal)
+       
+    }
+
+    
+}
+
+// MARK: - Actions
+extension HomeView {
+    
+    @IBAction func workoutPressed(_ sender: Any) {
+        self.presenter.routeToWorkout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func messagePressed(_ sender: Any) {
+        
     }
-    */
-
+    
 }

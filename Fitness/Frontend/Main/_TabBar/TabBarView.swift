@@ -11,6 +11,10 @@ class TabBarView: UITabBarController {
     
     lazy var presenter: TabBarPresenter = TabBarPresenter(from: self)
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .darkContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -27,9 +31,15 @@ class TabBarView: UITabBarController {
         super.viewDidAppear(animated)
         
         // Go to authentication if there is no user
-        guard let _: User = Auth.auth().currentUser else {
+        guard let user: User = Auth.auth().currentUser else {
             self.presenter.routeToAuth()
             return
+        }
+        
+    
+        
+        if !user.isEmailVerified {
+            // Verify user's email
         }
         
         
