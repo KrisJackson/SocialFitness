@@ -24,7 +24,7 @@ class HomeRouter {
         switch destination {
         case .workout:
             let storyboard = UIStoryboard(name: "Workout", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "WorkoutView") as! WorkoutView
+            let vc = storyboard.instantiateViewController(withIdentifier: "WorkoutNavView") as! WorkoutNavView
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .fullScreen
             self.presenter?.view.present(vc, animated: true, completion: nil)
