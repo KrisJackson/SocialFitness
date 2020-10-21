@@ -26,21 +26,7 @@ class WorkoutInfoView: UIViewController {
         /// Configure done button
         self.doneButton.layer.cornerRadius = 12
         self.doneButton.backgroundColor = .systemPink
-        
-        /// Configure header container view
-        self.headerContainerView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.08)
-        self.headerContainerView.layer.shadowRadius = 3
-        self.headerContainerView.layer.shadowOpacity = 1
-        self.headerContainerView.layer.masksToBounds = false
-        self.headerContainerView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        
-        /// Configure footer container view
-        self.footerContainerView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.08)
-        self.footerContainerView.layer.shadowRadius = 3
-        self.footerContainerView.layer.shadowOpacity = 1
-        self.footerContainerView.layer.masksToBounds = false
-        self.footerContainerView.layer.shadowOffset = CGSize(width: 0, height: -3)
-        
+//
     }
     
     override func viewDidAppear(_ animated: Bool) {
