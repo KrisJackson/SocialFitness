@@ -10,3 +10,6 @@ This project is in its initial stage of development.
 
 
 ![image](https://github.com/KrisJackson/SocialFitness/blob/main/Fitness/Screenshots/SignUp.jpg)
+
+
+![image](https://github.com/KrisJackson/SocialFitness/blob/main/Fitness/Screenshots/CreateWorkout.jpg)
