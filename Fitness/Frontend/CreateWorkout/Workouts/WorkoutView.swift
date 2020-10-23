@@ -14,6 +14,7 @@ class WorkoutView: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var workout: Workout = Workout()
     var selected: Workouts.ID? = nil
     lazy var presenter = WorkoutPresenter(from: self)
     
@@ -114,7 +115,8 @@ extension WorkoutView {
         guard let selected = self.selected else {
             return
         }
-        self.presenter.routeToWorkoutInfo(withData: selected)
+        self.workout.type = selected
+        self.presenter.routeToWorkoutInfo(withData: self.workout)
     }
     
 }

@@ -54,6 +54,8 @@ class WorkoutInfoView: UIViewController {
     @IBOutlet weak var headerContainerView: UIView!
     @IBOutlet weak var footerContainerView: UIView!
     
+    var workout: Workout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

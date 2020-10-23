@@ -23,8 +23,13 @@ class WorkoutRouter {
     func route(to destination: Destination, withData data: Any? = nil) {
         switch destination {
         case .workoutInfo:
+            guard let workout: Workout = data as? Workout else {
+                return
+            }
+            
             let storyboard = UIStoryboard(name: "Workout", bundle: Bundle.main)
             let vc = storyboard.instantiateViewController(withIdentifier: "WorkoutInfoView") as! WorkoutInfoView
+            vc.workout = workout
             self.presenter?.view.navigationController?.pushViewController(vc, animated: true)
             break
         case .previous:
