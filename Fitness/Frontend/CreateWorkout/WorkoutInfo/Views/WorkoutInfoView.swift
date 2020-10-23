@@ -7,47 +7,6 @@
 
 import UIKit
 
-class WorkoutInfoTextField: UITextField {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.adjustsFontSizeToFitWidth = false
-        self.font = .systemFont(ofSize: 18, weight: .regular)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
-    }
-    
-}
-
-class WorkoutInfoIcon: UIImageView {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.tintColor = .black
-        self.preferredSymbolConfiguration = .init(font: .systemFont(ofSize: 18, weight: .regular))
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
-    }
-    
-}
-
-class WorkoutInfoLabel: UILabel {
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.font = .systemFont(ofSize: 18, weight: .semibold)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
-    }
-    
-}
-
 class WorkoutInfoView: UIViewController {
     
     @IBOutlet weak var doneButton: UIButton!
