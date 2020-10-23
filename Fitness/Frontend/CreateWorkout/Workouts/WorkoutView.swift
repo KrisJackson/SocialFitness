@@ -42,7 +42,7 @@ class WorkoutView: UIViewController {
         // Configure continue button
         self.continueButton.isEnabled = false
         self.continueButton.backgroundColor = #colorLiteral(red: 1, green: 0.2156862745, blue: 0.3725490196, alpha: 0.5)
-        self.continueButton.layer.cornerRadius = 12
+        self.continueButton.layer.cornerRadius = continueButton.frame.height / 2
         self.continueButton.setTitle("Continue", for: .normal)
         self.continueButton.setTitleColor(.white, for: .normal)
         self.continueButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)

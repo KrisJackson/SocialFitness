@@ -34,6 +34,5 @@ class Workout {
     var desc: String!
     var distance: Distance!
     var time: Time!
-//    var
     
 }
