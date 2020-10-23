@@ -25,7 +25,7 @@ class Workout {
     }
     
     
-    /// Converts data to dictionary 
+    /// Converts data to dictionary
     func toDictionary() -> [String: Any] {
         return [
             "_id": self._id!,
@@ -50,6 +50,7 @@ class Workout {
     
     // MARK: - PRIVATE
     
+    /// Converts `Time` to seconds
     private func timeToSeconds(_ time: Time) -> NSNumber? {
         var totalSeconds: Double = 0
         

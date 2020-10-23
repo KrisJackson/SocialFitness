@@ -67,8 +67,8 @@ class WorkoutInfoView: UIViewController {
         }
         
         /// Configure done button
-        self.doneButton.layer.cornerRadius = doneButton.frame.height / 2
         self.doneButton.backgroundColor = .systemPink
+        self.doneButton.layer.cornerRadius = doneButton.frame.height / 2
     }
     
     override func viewDidAppear(_ animated: Bool) {
