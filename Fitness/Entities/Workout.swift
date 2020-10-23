@@ -8,30 +8,7 @@
 import Foundation
 import Firebase
 
-enum Unit: Int {
-    case miles = 0
-    case meter = 1
-    case kilometer = 2
-    case mph = 3
-    case kph = 4
-    case minPerMile = 5
-    case minPerKilometer = 6
-}
-
-struct Distance {
-    var distance: Double!
-    var unit: Unit!
-}
-
-struct Time {
-    var hours: Double!
-    var minutes: Double!
-    var seconds: Double!
-    var milliseconds: Double!
-}
-
 class Workout {
-    
     
     var _id: String!
     var desc: String!
@@ -41,7 +18,6 @@ class Workout {
     var distance: Distance!
     var reference: DocumentReference?
     
-    
     required init() {
         let ref = Firestore.firestore().collection("workouts").document()
         self.reference = ref
@@ -49,6 +25,7 @@ class Workout {
     }
     
     
+    /// Converts data to dictionary 
     func toDictionary() -> [String: Any] {
         return [
             "_id": self._id!,
@@ -63,12 +40,15 @@ class Workout {
     }
     
     
+    /// Adds data to Firestore
     func toFirestore(_ completion: @escaping (_ error: Error?) -> Void) {
         self.reference?.setData(self.toDictionary(), merge: true, completion: { (error) in
             completion(error)
         })
     }
     
+    
+    // MARK: - PRIVATE
     
     private func timeToSeconds(_ time: Time) -> NSNumber? {
         var totalSeconds: Double = 0
