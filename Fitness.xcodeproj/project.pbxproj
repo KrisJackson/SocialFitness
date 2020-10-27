@@ -292,8 +292,8 @@
 		1828CA472543975900900367 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				180D3DCE253F51DF000C9BFA /* WorkoutInfoError.swift */,
 				180D3DC4253F51C5000C9BFA /* WorkoutInfoInteractor.swift */,
+				180D3DCE253F51DF000C9BFA /* WorkoutInfoError.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";

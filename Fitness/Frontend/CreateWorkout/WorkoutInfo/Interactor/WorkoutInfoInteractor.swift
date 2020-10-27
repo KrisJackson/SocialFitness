@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class WorkoutInfoInteractor {
+
+    var presenter: WorkoutInfoPresenter?
+
+    required init(from delegate: WorkoutInfoPresenter) {
+        self.presenter = delegate
+    }
+
+}

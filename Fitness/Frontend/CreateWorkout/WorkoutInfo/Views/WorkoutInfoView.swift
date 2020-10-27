@@ -13,7 +13,11 @@ class WorkoutInfoView: UIViewController {
     @IBOutlet weak var headerContainerView: UIView!
     @IBOutlet weak var footerContainerView: UIView!
     
+    @IBOutlet weak var titleTextField: WorkoutInfoTextField!
+    @IBOutlet weak var descTextField: WorkoutInfoTextField!
+    
     var workout: Workout!
+    lazy var presenter = WorkoutInfoPresenter(from: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +29,22 @@ class WorkoutInfoView: UIViewController {
             self.view.layer.masksToBounds = true
         }
         
+        /// Configure title textfield
+        self.titleTextField.tag = 0
+        self.titleTextField.delegate = self
+        self.titleTextField.text = self.workout.title ?? ""
+        self.titleTextField.placeholder = "Name your workout"
+        
+        /// Configure description textfield
+        self.descTextField.tag = 1
+        self.descTextField.delegate = self
+        self.descTextField.text = self.workout.desc ?? ""
+        self.descTextField.placeholder = "Add a description"
+        
         /// Configure done button
         self.doneButton.backgroundColor = .systemPink
         self.doneButton.layer.cornerRadius = doneButton.frame.height / 2
+        self.doneButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,52 +75,33 @@ class WorkoutInfoView: UIViewController {
 }
 
 
+// MARK: - UITextField Delegate
+
+
+extension WorkoutInfoView: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        switch textField.tag {
+        case 0:
+            
+            textField.text!.isEmpty ? (self.workout.title = nil) : (self.workout.title = textField.text)
+            break
+            
+        default:
+            break
+        }
+    }
+    
+}
+
+
 // MARK: - Actions
 
 
 extension WorkoutInfoView {
     
     @IBAction func fieldPressed(_ sender: UIButton) {
-        switch sender.tag {
-        case 0:
-            print("Title")
-            break
-        case 1:
-            print("Description")
-            break
-        case 2:
-            print("Photos")
-            break
-        case 3:
-            print("Equiptment")
-            break
-        case 4:
-            print("Weight")
-            break
-        case 5:
-            print("Distance")
-            break
-        case 6:
-            print("Pace")
-            break
-        case 7:
-            print("Speed")
-            break
-        case 8:
-            print("Time Limit")
-            break
-        case 9:
-            print("Time Limit")
-            break
-        case 10:
-            print("Time Limit")
-            break
-        case 11:
-            print("Time Limit")
-            break
-        default:
-            break
-        }
+        
     }
     
     @IBAction func backPressed(_ sender: Any) {

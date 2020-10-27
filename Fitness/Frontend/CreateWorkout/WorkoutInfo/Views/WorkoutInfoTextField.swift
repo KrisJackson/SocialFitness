@@ -13,6 +13,7 @@ class WorkoutInfoTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.adjustsFontSizeToFitWidth = false
+        self.autocapitalizationType = .words
         self.font = .systemFont(ofSize: 18, weight: .regular)
     }
     

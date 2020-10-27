@@ -46,7 +46,7 @@ class WorkoutView: UIViewController {
         self.continueButton.layer.cornerRadius = continueButton.frame.height / 2
         self.continueButton.setTitle("Continue", for: .normal)
         self.continueButton.setTitleColor(.white, for: .normal)
-        self.continueButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
+        self.continueButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         
         /// Enables 'slide to dismiss' for views added to stack
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self

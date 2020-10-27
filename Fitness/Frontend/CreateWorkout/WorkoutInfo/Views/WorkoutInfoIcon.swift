@@ -12,7 +12,7 @@ class WorkoutInfoIcon: UIImageView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.tintColor = .black
-        self.preferredSymbolConfiguration = .init(font: .systemFont(ofSize: 18, weight: .regular))
+        self.preferredSymbolConfiguration = .init(font: .systemFont(ofSize: 17, weight: .regular))
     }
     
     required init?(coder aDecoder: NSCoder) {
