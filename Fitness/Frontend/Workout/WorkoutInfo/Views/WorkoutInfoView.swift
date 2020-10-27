@@ -33,18 +33,20 @@ class WorkoutInfoView: UIViewController {
         self.titleTextField.tag = 0
         self.titleTextField.delegate = self
         self.titleTextField.text = self.workout.title ?? ""
+        self.titleTextField.isUserInteractionEnabled = false
         self.titleTextField.placeholder = "Name your workout"
         
         /// Configure description textfield
         self.descTextField.tag = 1
         self.descTextField.delegate = self
         self.descTextField.text = self.workout.desc ?? ""
+        self.descTextField.isUserInteractionEnabled = false
         self.descTextField.placeholder = "Add a description"
         
         /// Configure done button
         self.doneButton.backgroundColor = .systemPink
         self.doneButton.layer.cornerRadius = doneButton.frame.height / 2
-        self.doneButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
+        self.doneButton.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -100,8 +102,7 @@ extension WorkoutInfoView: UITextFieldDelegate {
 
 extension WorkoutInfoView {
     
-    @IBAction func fieldPressed(_ sender: UIButton) {
-        
+    @IBAction func cellIsPressed(_ sender: Any) {
     }
     
     @IBAction func backPressed(_ sender: Any) {

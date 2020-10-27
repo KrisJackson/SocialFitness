@@ -306,14 +306,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		182D701C253B748B00C6BA09 /* CreateWorkout */ = {
+		182D701C253B748B00C6BA09 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
 				180D8F23253B85FE0067EAAC /* _Navigation */,
 				180D3DB6253F50D2000C9BFA /* Workouts */,
 				180D3DB2253F4F0D000C9BFA /* WorkoutInfo */,
 			);
-			path = CreateWorkout;
+			path = Workout;
 			sourceTree = "<group>";
 		};
 		182FDF8D252E4A240008D5EC = {
@@ -377,7 +377,7 @@
 				182FE003252E4D1B0008D5EC /* _Storyboards */,
 				18E96388253B9CDA00936FAF /* Auth */,
 				18AFF0FE2537A0CE009E3E42 /* Main */,
-				182D701C253B748B00C6BA09 /* CreateWorkout */,
+				182D701C253B748B00C6BA09 /* Workout */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";

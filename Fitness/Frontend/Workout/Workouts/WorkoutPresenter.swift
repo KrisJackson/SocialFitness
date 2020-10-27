@@ -52,6 +52,10 @@ class WorkoutPresenter {
     
     // MARK: - Router Functions
     
+    func routeToGet(data type: Any) {
+        
+    }
+    
     func routeToPrevious() {
         self.router.route(to: .previous)
     }
