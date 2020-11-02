@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout View-->
+        <scene sceneID="BJS-zT-4Z1">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8a5-qO-VtV" customClass="WorkoutView" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xkm-s5-cu0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJQ-st-kvn">
+                                <rect key="frame" x="0.0" y="777" width="414" height="119"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjF-d8-avw">
+                                        <rect key="frame" x="30" y="20" width="354" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="nee-u7-br8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="continuePressed:" destination="8a5-qO-VtV" eventType="touchUpInside" id="46q-0a-wOM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="JjF-d8-avw" firstAttribute="leading" secondItem="oJQ-st-kvn" secondAttribute="leading" constant="30" id="7Fh-Y3-TA4"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="JjF-d8-avw" secondAttribute="bottom" constant="12" id="cad-8v-6WV"/>
+                                    <constraint firstItem="JjF-d8-avw" firstAttribute="centerX" secondItem="oJQ-st-kvn" secondAttribute="centerX" id="fIS-tl-HC1"/>
+                                    <constraint firstItem="JjF-d8-avw" firstAttribute="top" secondItem="oJQ-st-kvn" secondAttribute="top" constant="20" id="qX2-gD-fgq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCe-ku-TvC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="187.66666666666666"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-28-jTa">
+                                        <rect key="frame" x="20" y="52" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelPressed:" destination="8a5-qO-VtV" eventType="touchUpInside" id="QCc-uj-EwI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new workout" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l6-ZJ-lwP">
+                                        <rect key="frame" x="57" y="94" width="300" height="32.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="D25-vc-rJg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the type of workout that you would like to create." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8V-Q7-5d6">
+                                        <rect key="frame" x="57" y="129.33333333333334" width="300" height="38.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="w8V-Q7-5d6" secondAttribute="bottom" constant="20" id="9sE-8G-UUe"/>
+                                    <constraint firstItem="w8V-Q7-5d6" firstAttribute="width" secondItem="8l6-ZJ-lwP" secondAttribute="width" id="O8w-Xg-FLv"/>
+                                    <constraint firstItem="w8V-Q7-5d6" firstAttribute="centerX" secondItem="iCe-ku-TvC" secondAttribute="centerX" id="P2W-hl-rKW"/>
+                                    <constraint firstItem="VIl-28-jTa" firstAttribute="leading" secondItem="iCe-ku-TvC" secondAttribute="leadingMargin" constant="12" id="QWL-S8-Aew"/>
+                                    <constraint firstItem="8l6-ZJ-lwP" firstAttribute="top" secondItem="VIl-28-jTa" secondAttribute="bottom" constant="12" id="T9J-gS-5Kd"/>
+                                    <constraint firstItem="w8V-Q7-5d6" firstAttribute="top" secondItem="8l6-ZJ-lwP" secondAttribute="bottom" constant="3" id="egF-lf-tTM"/>
+                                    <constraint firstItem="VIl-28-jTa" firstAttribute="top" secondItem="iCe-ku-TvC" secondAttribute="topMargin" id="pVP-OA-8gI"/>
+                                    <constraint firstItem="8l6-ZJ-lwP" firstAttribute="centerX" secondItem="iCe-ku-TvC" secondAttribute="centerX" id="s1P-iP-mM3"/>
+                                    <constraint firstItem="8l6-ZJ-lwP" firstAttribute="centerX" secondItem="iCe-ku-TvC" secondAttribute="centerX" id="vE8-DC-hYp"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Rq-On-O5j">
+                                <rect key="frame" x="0.0" y="187.66666666666669" width="414" height="589.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BHx-4B-VU0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cLe-Yf-Zh6">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q0d-4n-SjL">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PJ0-ja-paU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oJQ-st-kvn" secondAttribute="bottom" id="9He-Y8-sTl"/>
+                            <constraint firstItem="oJQ-st-kvn" firstAttribute="trailing" secondItem="PJ0-ja-paU" secondAttribute="trailing" id="9kF-Ww-kVR"/>
+                            <constraint firstItem="iCe-ku-TvC" firstAttribute="trailing" secondItem="PJ0-ja-paU" secondAttribute="trailing" id="9va-Pw-D3z"/>
+                            <constraint firstItem="oJQ-st-kvn" firstAttribute="centerX" secondItem="xkm-s5-cu0" secondAttribute="centerX" id="MjN-kt-j8b"/>
+                            <constraint firstItem="oJQ-st-kvn" firstAttribute="top" secondItem="5Rq-On-O5j" secondAttribute="bottom" id="VUm-Nc-aUK"/>
+                            <constraint firstItem="oJQ-st-kvn" firstAttribute="leading" secondItem="PJ0-ja-paU" secondAttribute="leading" id="Z3A-Ry-TNS"/>
+                            <constraint firstItem="5Rq-On-O5j" firstAttribute="leading" secondItem="PJ0-ja-paU" secondAttribute="leading" id="eIl-oc-DBP"/>
+                            <constraint firstItem="iCe-ku-TvC" firstAttribute="leading" secondItem="PJ0-ja-paU" secondAttribute="leading" id="igG-2S-UPd"/>
+                            <constraint firstItem="5Rq-On-O5j" firstAttribute="top" secondItem="iCe-ku-TvC" secondAttribute="bottom" id="nUR-yb-EEQ"/>
+                            <constraint firstItem="iCe-ku-TvC" firstAttribute="centerX" secondItem="xkm-s5-cu0" secondAttribute="centerX" id="qV6-bV-28v"/>
+                            <constraint firstItem="iCe-ku-TvC" firstAttribute="top" secondItem="xkm-s5-cu0" secondAttribute="top" id="vqk-i9-w6Y"/>
+                            <constraint firstItem="5Rq-On-O5j" firstAttribute="trailing" secondItem="PJ0-ja-paU" secondAttribute="trailing" id="yJf-5k-FTA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0qz-Yg-Jds"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5Rq-On-O5j" id="58F-Bh-Oa1"/>
+                        <outlet property="continueButton" destination="JjF-d8-avw" id="pJI-dx-gZC"/>
+                        <outlet property="headerLabel" destination="8l6-ZJ-lwP" id="cQb-37-9nz"/>
+                        <outlet property="subHeaderLabel" destination="w8V-Q7-5d6" id="7nz-Is-mjl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iW7-ed-orx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="163"/>
+        </scene>
+        <!--Workout Info View-->
+        <scene sceneID="Zm0-9P-N6e">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutInfoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iG2-O8-7iO" customClass="WorkoutInfoView" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2H-fh-mNR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="NIW-ET-nxm">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="kJ6-Wr-D0g">
+                                        <rect key="frame" x="20" y="52.333333333333343" width="374" height="41.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORKOUT NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-a6-5Di" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="29.999999999999996" width="374" height="14.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryD-Eu-gNH" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="123.66666666666666" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="CGL-MN-nEh"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note.text" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JG9-OG-zQr" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="145.66666666666666" width="22.333333333333329" height="19.000000000000014"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </preferredSymbolConfiguration>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY9-w3-sb8" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="50.333333333333336" y="143.66666666666666" width="84.333333333333314" height="14.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Describe your workout" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uFz-aP-H7L" customClass="WorkoutInfoTextView" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="45.333333333333343" y="158" width="353.66666666666663" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Gkc-HO-Rsq"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="placeholderTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-q5-yEK" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="kfB-OV-C1h"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke8-Rm-GPE" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="206.66666666666666" y="259" width="1" height="85.666666666666686"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="SYC-GX-A31"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-l0-X70" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="344.66666666666669" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="edJ-NK-BM8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8K-lc-EWL">
+                                        <rect key="frame" x="20" y="279" width="178.66666666666666" height="45.666666666666686"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ruler" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="G0I-0x-Trg" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="4.3333333333333339" width="26.333333333333332" height="17.333333333333329"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="G0I-0x-Trg" secondAttribute="height" multiplier="1:1" id="34v-cG-Lp0"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENW-Iy-MZw" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="34.333333333333329" y="0.0" width="144.33333333333337" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00 mi" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="fv0-ul-3F0" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="34.333333333333329" y="20" width="144.33333333333337" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ENW-Iy-MZw" secondAttribute="trailing" id="E7Y-B3-3nf"/>
+                                            <constraint firstItem="G0I-0x-Trg" firstAttribute="leading" secondItem="c8K-lc-EWL" secondAttribute="leading" id="I8z-Ga-nDq"/>
+                                            <constraint firstItem="fv0-ul-3F0" firstAttribute="top" secondItem="ENW-Iy-MZw" secondAttribute="bottom" constant="5" id="Mtk-PO-axg"/>
+                                            <constraint firstItem="fv0-ul-3F0" firstAttribute="leading" secondItem="ENW-Iy-MZw" secondAttribute="leading" id="VOi-0L-Uax"/>
+                                            <constraint firstAttribute="bottom" secondItem="fv0-ul-3F0" secondAttribute="bottom" id="cpB-9e-5ha"/>
+                                            <constraint firstItem="ENW-Iy-MZw" firstAttribute="top" secondItem="c8K-lc-EWL" secondAttribute="top" id="ogV-km-jXt"/>
+                                            <constraint firstItem="G0I-0x-Trg" firstAttribute="top" secondItem="c8K-lc-EWL" secondAttribute="top" id="prp-Vf-6Vu"/>
+                                            <constraint firstAttribute="trailing" secondItem="fv0-ul-3F0" secondAttribute="trailing" id="sFs-0d-JPR"/>
+                                            <constraint firstItem="ENW-Iy-MZw" firstAttribute="leading" secondItem="G0I-0x-Trg" secondAttribute="trailing" constant="8" id="yKC-Mc-7vK"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yp-aQ-Z6D">
+                                        <rect key="frame" x="215.66666666666663" y="279" width="178.33333333333337" height="45.666666666666686"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scalemass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Itg-d3-VxN" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="22.333333333333332" height="22.333333333333332"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Itg-d3-VxN" secondAttribute="height" multiplier="1:1" id="xKg-IS-XtN"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WEIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMP-Ja-qHt" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="30.333333333333343" y="0.0" width="148" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0 lb" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="TV2-Fn-hsb" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="30.333333333333343" y="20" width="148" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Itg-d3-VxN" firstAttribute="top" secondItem="2yp-aQ-Z6D" secondAttribute="top" id="0Qq-zc-9k3"/>
+                                            <constraint firstAttribute="trailing" secondItem="TV2-Fn-hsb" secondAttribute="trailing" id="BAS-xc-Oyf"/>
+                                            <constraint firstItem="TV2-Fn-hsb" firstAttribute="leading" secondItem="UMP-Ja-qHt" secondAttribute="leading" id="BjQ-dn-9xS"/>
+                                            <constraint firstItem="UMP-Ja-qHt" firstAttribute="top" secondItem="2yp-aQ-Z6D" secondAttribute="top" id="Lfa-nk-5qK"/>
+                                            <constraint firstItem="Itg-d3-VxN" firstAttribute="leading" secondItem="2yp-aQ-Z6D" secondAttribute="leading" id="S7D-jG-X3j"/>
+                                            <constraint firstAttribute="bottom" secondItem="TV2-Fn-hsb" secondAttribute="bottom" id="VfZ-DJ-tIk"/>
+                                            <constraint firstItem="TV2-Fn-hsb" firstAttribute="top" secondItem="UMP-Ja-qHt" secondAttribute="bottom" constant="5" id="lSb-yo-AK2"/>
+                                            <constraint firstItem="UMP-Ja-qHt" firstAttribute="leading" secondItem="Itg-d3-VxN" secondAttribute="trailing" constant="8" id="sYL-2O-hMK"/>
+                                            <constraint firstAttribute="trailing" secondItem="UMP-Ja-qHt" secondAttribute="trailing" id="uYu-Y9-c0L"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6I-aX-665">
+                                        <rect key="frame" x="20" y="365.66666666666669" width="374" height="45.666666666666686"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xpN-P9-Ver" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.66666666666666785" width="21.333333333333332" height="20.666666666666664"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xpN-P9-Ver" secondAttribute="height" multiplier="1:1" id="JMO-Iq-MqA"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-Yd-CX8" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333343" y="0.0" width="344.66666666666663" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="00:00:00.00" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="P9L-hD-Fbb" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333343" y="20" width="344.66666666666663" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2Cp-Yd-CX8" firstAttribute="top" secondItem="q6I-aX-665" secondAttribute="top" id="8gu-zX-Skq"/>
+                                            <constraint firstItem="xpN-P9-Ver" firstAttribute="top" secondItem="q6I-aX-665" secondAttribute="top" id="CnW-wf-fMr"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Cp-Yd-CX8" secondAttribute="trailing" id="GG6-SA-B2l"/>
+                                            <constraint firstItem="P9L-hD-Fbb" firstAttribute="leading" secondItem="2Cp-Yd-CX8" secondAttribute="leading" id="NdG-SZ-eKy"/>
+                                            <constraint firstAttribute="bottom" secondItem="P9L-hD-Fbb" secondAttribute="bottom" id="Sd2-hn-zWk"/>
+                                            <constraint firstAttribute="trailing" secondItem="P9L-hD-Fbb" secondAttribute="trailing" id="Ywn-gi-2Ga"/>
+                                            <constraint firstItem="xpN-P9-Ver" firstAttribute="leading" secondItem="q6I-aX-665" secondAttribute="leading" id="fhh-Hv-apH"/>
+                                            <constraint firstItem="P9L-hD-Fbb" firstAttribute="top" secondItem="2Cp-Yd-CX8" secondAttribute="bottom" constant="5" id="vrW-cs-YKg"/>
+                                            <constraint firstItem="2Cp-Yd-CX8" firstAttribute="leading" secondItem="xpN-P9-Ver" secondAttribute="trailing" constant="8" id="ySl-Hh-ROx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lld-fE-Aq4" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="431.33333333333337" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="5ND-tp-68X"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B3-01-prF">
+                                        <rect key="frame" x="20" y="452.33333333333337" width="178.66666666666666" height="45.666666666666686"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speedometer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aGj-pq-i5G" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="21.333333333333332" height="20.666666666666664"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aGj-pq-i5G" secondAttribute="height" multiplier="1:1" id="VOu-k8-nZp"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p97-LW-fDT" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333329" y="0.0" width="149.33333333333337" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0 mph" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="mp2-Y2-CSL" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333329" y="20" width="149.33333333333337" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="aGj-pq-i5G" firstAttribute="leading" secondItem="0B3-01-prF" secondAttribute="leading" id="3iF-Vw-p0t"/>
+                                            <constraint firstAttribute="bottom" secondItem="mp2-Y2-CSL" secondAttribute="bottom" id="5IL-Fc-DCu"/>
+                                            <constraint firstItem="p97-LW-fDT" firstAttribute="top" secondItem="0B3-01-prF" secondAttribute="top" id="7kL-O6-LeL"/>
+                                            <constraint firstAttribute="trailing" secondItem="p97-LW-fDT" secondAttribute="trailing" id="8Ta-gV-XsV"/>
+                                            <constraint firstItem="p97-LW-fDT" firstAttribute="leading" secondItem="aGj-pq-i5G" secondAttribute="trailing" constant="8" id="Kuj-vl-qbO"/>
+                                            <constraint firstAttribute="trailing" secondItem="mp2-Y2-CSL" secondAttribute="trailing" id="Yb7-YJ-26B"/>
+                                            <constraint firstItem="mp2-Y2-CSL" firstAttribute="top" secondItem="p97-LW-fDT" secondAttribute="bottom" constant="5" id="odD-Kx-AKN"/>
+                                            <constraint firstItem="mp2-Y2-CSL" firstAttribute="leading" secondItem="p97-LW-fDT" secondAttribute="leading" id="sxN-4U-BUi"/>
+                                            <constraint firstItem="aGj-pq-i5G" firstAttribute="top" secondItem="0B3-01-prF" secondAttribute="top" id="vRg-fd-TmS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUF-Pr-D4Z" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="206.66666666666666" y="432.33333333333337" width="1" height="85.666666666666629"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="qMa-5l-SKT"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zl-fw-KuK" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="206.66666666666666" y="605.66666666666663" width="1" height="85.666666666666629"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="vGv-H2-con"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdC-na-5PS" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="518" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ia5-LV-j1V"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-Ta-vGF" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="691.33333333333337" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="0bX-nV-9aA"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-bP-1PK">
+                                        <rect key="frame" x="215.66666666666663" y="452.33333333333337" width="178.33333333333337" height="45.666666666666686"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sIb-a5-gvm" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="21.333333333333332" height="20.666666666666664"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sIb-a5-gvm" secondAttribute="height" multiplier="1:1" id="0Ii-c5-4Ie"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PACE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F31-Nq-7Xf" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333343" y="0.0" width="149" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0'00&quot;" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-Bz-qWY" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333343" y="20" width="149" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dNt-Bz-qWY" secondAttribute="bottom" id="19W-a9-cTn"/>
+                                            <constraint firstItem="F31-Nq-7Xf" firstAttribute="top" secondItem="ii0-bP-1PK" secondAttribute="top" id="OjH-iY-vdC"/>
+                                            <constraint firstItem="sIb-a5-gvm" firstAttribute="top" secondItem="ii0-bP-1PK" secondAttribute="top" id="Zft-oW-FfL"/>
+                                            <constraint firstItem="dNt-Bz-qWY" firstAttribute="leading" secondItem="F31-Nq-7Xf" secondAttribute="leading" id="cuO-8i-gyI"/>
+                                            <constraint firstAttribute="trailing" secondItem="dNt-Bz-qWY" secondAttribute="trailing" id="gU1-g9-Jw1"/>
+                                            <constraint firstAttribute="trailing" secondItem="F31-Nq-7Xf" secondAttribute="trailing" id="jLa-88-UrT"/>
+                                            <constraint firstItem="sIb-a5-gvm" firstAttribute="leading" secondItem="ii0-bP-1PK" secondAttribute="leading" id="kwm-Vv-4Vh"/>
+                                            <constraint firstItem="dNt-Bz-qWY" firstAttribute="top" secondItem="F31-Nq-7Xf" secondAttribute="bottom" constant="5" id="saz-HO-uat"/>
+                                            <constraint firstItem="F31-Nq-7Xf" firstAttribute="leading" secondItem="sIb-a5-gvm" secondAttribute="trailing" constant="8" id="zDT-e4-m43"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Om3-rv-Reb">
+                                        <rect key="frame" x="20" y="539" width="374" height="45.666666666666629"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolt.heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sGQ-pD-Yaf" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1.3333333333333339" width="22.333333333333332" height="19.999999999999993"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sGQ-pD-Yaf" secondAttribute="height" multiplier="1:1" id="4j3-hu-lQj"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TARGET HEART RATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAk-Av-KhA" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="30.333333333333343" y="0.0" width="343.66666666666663" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0 bpm" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-Ch-Tmp" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="30.333333333333343" y="20" width="343.66666666666663" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="xAk-Av-KhA" firstAttribute="top" secondItem="Om3-rv-Reb" secondAttribute="top" id="F7q-yy-8YE"/>
+                                            <constraint firstItem="xAk-Av-KhA" firstAttribute="leading" secondItem="sGQ-pD-Yaf" secondAttribute="trailing" constant="8" id="Gqe-rn-vT9"/>
+                                            <constraint firstItem="sGQ-pD-Yaf" firstAttribute="leading" secondItem="Om3-rv-Reb" secondAttribute="leading" id="OYo-eD-p1S"/>
+                                            <constraint firstItem="hdb-Ch-Tmp" firstAttribute="top" secondItem="xAk-Av-KhA" secondAttribute="bottom" constant="5" id="SSc-fo-VXR"/>
+                                            <constraint firstItem="hdb-Ch-Tmp" firstAttribute="leading" secondItem="xAk-Av-KhA" secondAttribute="leading" id="c1D-eq-eoR"/>
+                                            <constraint firstAttribute="trailing" secondItem="xAk-Av-KhA" secondAttribute="trailing" id="n3o-hO-UTA"/>
+                                            <constraint firstItem="sGQ-pD-Yaf" firstAttribute="top" secondItem="Om3-rv-Reb" secondAttribute="top" id="sDu-hP-Mqy"/>
+                                            <constraint firstAttribute="trailing" secondItem="hdb-Ch-Tmp" secondAttribute="trailing" id="vnn-zD-q6b"/>
+                                            <constraint firstAttribute="bottom" secondItem="hdb-Ch-Tmp" secondAttribute="bottom" id="zdz-5A-YkI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0L-Nu-pfZ" customClass="InfoSeparator" customModule="Fitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="604.66666666666663" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ilI-Ob-Ijy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-ki-eEX">
+                                        <rect key="frame" x="20" y="625.66666666666663" width="178.66666666666666" height="45.666666666666629"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1FR-3N-Lzv" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="21.333333333333332" height="21.999999999999996"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1FR-3N-Lzv" secondAttribute="height" multiplier="1:1" id="iaR-4a-vC5"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kao-wo-zsv" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333329" y="0.0" width="149.33333333333337" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0 cal" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZR5-i6-nBY" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="29.333333333333329" y="20" width="149.33333333333337" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ZR5-i6-nBY" secondAttribute="bottom" id="7I6-li-ae7"/>
+                                            <constraint firstItem="kao-wo-zsv" firstAttribute="leading" secondItem="1FR-3N-Lzv" secondAttribute="trailing" constant="8" id="85z-9q-QQy"/>
+                                            <constraint firstAttribute="trailing" secondItem="kao-wo-zsv" secondAttribute="trailing" id="Fuz-th-pvY"/>
+                                            <constraint firstItem="1FR-3N-Lzv" firstAttribute="top" secondItem="7kY-ki-eEX" secondAttribute="top" id="Rl1-Sx-zHy"/>
+                                            <constraint firstItem="ZR5-i6-nBY" firstAttribute="leading" secondItem="kao-wo-zsv" secondAttribute="leading" id="Yyk-tq-FcO"/>
+                                            <constraint firstItem="kao-wo-zsv" firstAttribute="top" secondItem="7kY-ki-eEX" secondAttribute="top" id="bNc-Ma-Ufe"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZR5-i6-nBY" secondAttribute="trailing" id="cCp-W6-7ot"/>
+                                            <constraint firstItem="ZR5-i6-nBY" firstAttribute="top" secondItem="kao-wo-zsv" secondAttribute="bottom" constant="5" id="naS-cA-zCC"/>
+                                            <constraint firstItem="1FR-3N-Lzv" firstAttribute="leading" secondItem="7kY-ki-eEX" secondAttribute="leading" id="tsd-9W-JzD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDQ-L1-f8n">
+                                        <rect key="frame" x="215.66666666666663" y="625.66666666666663" width="178.33333333333337" height="45.666666666666629"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="repeat" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4nY-iG-mL7" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="1" width="24" height="21.666666666666664"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4nY-iG-mL7" secondAttribute="height" multiplier="1:1" id="9x2-1e-Phk"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPETITIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO9-Qz-TO3" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="0.0" width="146.33333333333334" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0 reps" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="leW-Ba-QdG" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="20" width="146.33333333333334" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="leW-Ba-QdG" firstAttribute="top" secondItem="cO9-Qz-TO3" secondAttribute="bottom" constant="5" id="2Lj-5A-ZXG"/>
+                                            <constraint firstItem="cO9-Qz-TO3" firstAttribute="top" secondItem="jDQ-L1-f8n" secondAttribute="top" id="5Fu-Lm-Ncr"/>
+                                            <constraint firstItem="leW-Ba-QdG" firstAttribute="leading" secondItem="cO9-Qz-TO3" secondAttribute="leading" id="KzU-zm-HLb"/>
+                                            <constraint firstAttribute="trailing" secondItem="leW-Ba-QdG" secondAttribute="trailing" id="MIU-cH-Auq"/>
+                                            <constraint firstItem="4nY-iG-mL7" firstAttribute="top" secondItem="jDQ-L1-f8n" secondAttribute="top" id="SvJ-P4-c5S"/>
+                                            <constraint firstItem="cO9-Qz-TO3" firstAttribute="leading" secondItem="4nY-iG-mL7" secondAttribute="trailing" constant="8" id="T0n-JH-Ap8"/>
+                                            <constraint firstAttribute="bottom" secondItem="leW-Ba-QdG" secondAttribute="bottom" id="ZTi-tb-CaD"/>
+                                            <constraint firstItem="4nY-iG-mL7" firstAttribute="leading" secondItem="jDQ-L1-f8n" secondAttribute="leading" id="jsA-29-7kb"/>
+                                            <constraint firstAttribute="trailing" secondItem="cO9-Qz-TO3" secondAttribute="trailing" id="nhP-Dq-s2c"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCt-GO-MrN">
+                                        <rect key="frame" x="20" y="712.33333333333337" width="374" height="45.666666666666629"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wrench.and.screwdriver" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yeg-Nt-GK1" customClass="WorkoutInfoIcon" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-1.3333333333333321" width="25.333333333333332" height="28.333333333333329"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yeg-Nt-GK1" secondAttribute="height" multiplier="1:1" id="GSs-PP-EOu"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                </preferredSymbolConfiguration>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EQUIPTMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGn-PW-eA2" customClass="WorkoutInfoLabel" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="33.333333333333343" y="0.0" width="340.66666666666663" height="15"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="None" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="fRv-lW-4ZM" customClass="WorkoutInfoTextField" customModule="Fitness" customModuleProvider="target">
+                                                <rect key="frame" x="33.333333333333343" y="20" width="340.66666666666663" height="25.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fRv-lW-4ZM" secondAttribute="trailing" id="9BD-sc-yx9"/>
+                                            <constraint firstAttribute="trailing" secondItem="nGn-PW-eA2" secondAttribute="trailing" id="FQM-aq-6tM"/>
+                                            <constraint firstItem="nGn-PW-eA2" firstAttribute="top" secondItem="lCt-GO-MrN" secondAttribute="top" id="Svu-rV-n6O"/>
+                                            <constraint firstItem="fRv-lW-4ZM" firstAttribute="top" secondItem="nGn-PW-eA2" secondAttribute="bottom" constant="5" id="Uzv-it-c1B"/>
+                                            <constraint firstItem="yeg-Nt-GK1" firstAttribute="leading" secondItem="lCt-GO-MrN" secondAttribute="leading" id="ce6-Pd-1Fd"/>
+                                            <constraint firstItem="nGn-PW-eA2" firstAttribute="leading" secondItem="yeg-Nt-GK1" secondAttribute="trailing" constant="8" id="mfh-Fc-qOW"/>
+                                            <constraint firstItem="yeg-Nt-GK1" firstAttribute="top" secondItem="lCt-GO-MrN" secondAttribute="top" id="qHL-dv-hh2"/>
+                                            <constraint firstAttribute="bottom" secondItem="fRv-lW-4ZM" secondAttribute="bottom" id="tHd-FT-yu5"/>
+                                            <constraint firstItem="fRv-lW-4ZM" firstAttribute="leading" secondItem="nGn-PW-eA2" secondAttribute="leading" id="u5M-qe-VBe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97271573600000005" green="0.97271573600000005" blue="0.97271573600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vUF-Pr-D4Z" firstAttribute="top" secondItem="lld-fE-Aq4" secondAttribute="bottom" id="01J-S5-gBP"/>
+                                    <constraint firstItem="Kdy-q5-yEK" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="0Nh-fF-giq"/>
+                                    <constraint firstItem="ii0-bP-1PK" firstAttribute="centerY" secondItem="0B3-01-prF" secondAttribute="centerY" id="1Jn-Pm-sia"/>
+                                    <constraint firstItem="0B3-01-prF" firstAttribute="top" secondItem="lld-fE-Aq4" secondAttribute="bottom" constant="20" id="1MV-Mc-Xw7"/>
+                                    <constraint firstItem="GaS-l0-X70" firstAttribute="top" secondItem="Ke8-Rm-GPE" secondAttribute="bottom" id="2rD-7k-HFe"/>
+                                    <constraint firstAttribute="trailing" secondItem="uFz-aP-H7L" secondAttribute="trailing" constant="15" id="3CO-aD-vAe"/>
+                                    <constraint firstAttribute="trailing" secondItem="q6I-aX-665" secondAttribute="trailing" constant="20" id="4eY-31-RtS"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="lCt-GO-MrN" secondAttribute="bottom" constant="55" id="4yc-L6-GrC"/>
+                                    <constraint firstItem="c8K-lc-EWL" firstAttribute="top" secondItem="Kdy-q5-yEK" secondAttribute="bottom" constant="20" id="5xo-5B-mfg"/>
+                                    <constraint firstItem="TY9-w3-sb8" firstAttribute="leading" secondItem="JG9-OG-zQr" secondAttribute="trailing" constant="8" id="6cj-vD-605"/>
+                                    <constraint firstItem="2yp-aQ-Z6D" firstAttribute="centerY" secondItem="c8K-lc-EWL" secondAttribute="centerY" id="8jv-DG-Qfh"/>
+                                    <constraint firstItem="2yp-aQ-Z6D" firstAttribute="centerY" secondItem="c8K-lc-EWL" secondAttribute="centerY" id="9iW-E4-mDI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Om3-rv-Reb" secondAttribute="trailing" constant="20" id="9jJ-Bo-FGm"/>
+                                    <constraint firstItem="lld-fE-Aq4" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="A4E-nO-JS1"/>
+                                    <constraint firstItem="TY9-w3-sb8" firstAttribute="top" secondItem="JG9-OG-zQr" secondAttribute="top" constant="-1" id="BHS-ti-T8h"/>
+                                    <constraint firstItem="hGF-Ta-vGF" firstAttribute="top" secondItem="5zl-fw-KuK" secondAttribute="bottom" id="CG2-eI-POf"/>
+                                    <constraint firstItem="2yp-aQ-Z6D" firstAttribute="leading" secondItem="Ke8-Rm-GPE" secondAttribute="trailing" constant="8" id="DBc-R0-mqV"/>
+                                    <constraint firstItem="kJ6-Wr-D0g" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="Dgt-sd-bnP"/>
+                                    <constraint firstItem="7kY-ki-eEX" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="Dxc-4N-q5g"/>
+                                    <constraint firstItem="Ke8-Rm-GPE" firstAttribute="leading" secondItem="c8K-lc-EWL" secondAttribute="trailing" constant="8" id="E7r-ZU-xSz"/>
+                                    <constraint firstItem="NdC-na-5PS" firstAttribute="top" secondItem="vUF-Pr-D4Z" secondAttribute="bottom" id="FDO-Qw-Tca"/>
+                                    <constraint firstItem="Ke8-Rm-GPE" firstAttribute="top" secondItem="Kdy-q5-yEK" secondAttribute="bottom" id="FVU-c6-aYF"/>
+                                    <constraint firstItem="GaS-l0-X70" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="FXC-PL-Gk9"/>
+                                    <constraint firstItem="Ke8-Rm-GPE" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="GGD-An-kM4"/>
+                                    <constraint firstItem="ryD-Eu-gNH" firstAttribute="top" secondItem="kJ6-Wr-D0g" secondAttribute="bottom" constant="30" id="GGh-yi-gjZ"/>
+                                    <constraint firstItem="7kY-ki-eEX" firstAttribute="top" secondItem="c0L-Nu-pfZ" secondAttribute="bottom" constant="20" id="Glb-YA-LRU"/>
+                                    <constraint firstItem="uFz-aP-H7L" firstAttribute="leading" secondItem="TY9-w3-sb8" secondAttribute="leading" constant="-5" id="IGB-R3-1yS"/>
+                                    <constraint firstItem="Om3-rv-Reb" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="KWs-cp-IKr"/>
+                                    <constraint firstItem="Kdy-q5-yEK" firstAttribute="top" secondItem="uFz-aP-H7L" secondAttribute="bottom" id="Kxj-Pz-Vve"/>
+                                    <constraint firstItem="ryD-Eu-gNH" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="L64-bF-22J"/>
+                                    <constraint firstItem="NdC-na-5PS" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="LiQ-cm-0pV"/>
+                                    <constraint firstAttribute="trailing" secondItem="2yp-aQ-Z6D" secondAttribute="trailing" constant="20" id="LqR-5B-4A4"/>
+                                    <constraint firstAttribute="trailing" secondItem="MiM-a6-5Di" secondAttribute="trailing" constant="20" id="N1w-y9-HOl"/>
+                                    <constraint firstItem="MiM-a6-5Di" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="PPo-93-HoE"/>
+                                    <constraint firstAttribute="trailing" secondItem="jDQ-L1-f8n" secondAttribute="trailing" constant="20" id="QSi-xy-7l0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ii0-bP-1PK" secondAttribute="trailing" constant="20" id="QUs-cP-qc6"/>
+                                    <constraint firstItem="lCt-GO-MrN" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="Qay-Pz-Bj0"/>
+                                    <constraint firstItem="lld-fE-Aq4" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="RKI-do-xka"/>
+                                    <constraint firstItem="5zl-fw-KuK" firstAttribute="leading" secondItem="7kY-ki-eEX" secondAttribute="trailing" constant="8" id="RUP-wG-T6J"/>
+                                    <constraint firstItem="kJ6-Wr-D0g" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="Rlz-5j-Jam"/>
+                                    <constraint firstItem="2yp-aQ-Z6D" firstAttribute="width" secondItem="c8K-lc-EWL" secondAttribute="width" id="Sww-eU-02F"/>
+                                    <constraint firstItem="0B3-01-prF" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="UCM-Z6-7FD"/>
+                                    <constraint firstAttribute="trailing" secondItem="lCt-GO-MrN" secondAttribute="trailing" constant="20" id="UlQ-l3-wsS"/>
+                                    <constraint firstItem="NdC-na-5PS" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="Uni-QB-7OV"/>
+                                    <constraint firstItem="5zl-fw-KuK" firstAttribute="top" secondItem="c0L-Nu-pfZ" secondAttribute="bottom" id="Ut4-m1-TjF"/>
+                                    <constraint firstItem="c0L-Nu-pfZ" firstAttribute="top" secondItem="Om3-rv-Reb" secondAttribute="bottom" constant="20" id="Uvg-2H-fIQ"/>
+                                    <constraint firstItem="7kY-ki-eEX" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="WSf-Nc-sLy"/>
+                                    <constraint firstItem="vUF-Pr-D4Z" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="X4b-yd-4LC"/>
+                                    <constraint firstItem="hGF-Ta-vGF" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="XS1-zY-lik"/>
+                                    <constraint firstItem="Om3-rv-Reb" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="YNf-w0-VcF"/>
+                                    <constraint firstItem="ryD-Eu-gNH" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="Yrj-Yc-8d5"/>
+                                    <constraint firstItem="lCt-GO-MrN" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="ZOl-DR-bs2"/>
+                                    <constraint firstItem="c0L-Nu-pfZ" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="ZYi-aM-Dun"/>
+                                    <constraint firstItem="GaS-l0-X70" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="ZaE-dT-AfM"/>
+                                    <constraint firstItem="jDQ-L1-f8n" firstAttribute="centerY" secondItem="7kY-ki-eEX" secondAttribute="centerY" id="a5p-6S-BM8"/>
+                                    <constraint firstItem="lCt-GO-MrN" firstAttribute="top" secondItem="hGF-Ta-vGF" secondAttribute="bottom" constant="20" id="b7f-iS-rFO"/>
+                                    <constraint firstItem="jDQ-L1-f8n" firstAttribute="leading" secondItem="5zl-fw-KuK" secondAttribute="trailing" constant="8" id="bOF-Aa-7pc"/>
+                                    <constraint firstItem="lld-fE-Aq4" firstAttribute="top" secondItem="q6I-aX-665" secondAttribute="bottom" constant="20" id="bgq-M4-39f"/>
+                                    <constraint firstItem="q6I-aX-665" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="cII-Dn-toB"/>
+                                    <constraint firstItem="MiM-a6-5Di" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="cOR-i7-Jhk"/>
+                                    <constraint firstItem="q6I-aX-665" firstAttribute="top" secondItem="GaS-l0-X70" secondAttribute="bottom" constant="20" id="ddd-4N-nFz"/>
+                                    <constraint firstItem="5zl-fw-KuK" firstAttribute="centerY" secondItem="7kY-ki-eEX" secondAttribute="centerY" id="dkR-Ds-jQm"/>
+                                    <constraint firstItem="vUF-Pr-D4Z" firstAttribute="centerY" secondItem="0B3-01-prF" secondAttribute="centerY" id="g4U-7b-oxv"/>
+                                    <constraint firstItem="uFz-aP-H7L" firstAttribute="top" secondItem="TY9-w3-sb8" secondAttribute="bottom" id="hOk-jj-eOO"/>
+                                    <constraint firstItem="JG9-OG-zQr" firstAttribute="top" secondItem="ryD-Eu-gNH" secondAttribute="bottom" constant="20" id="iIP-hu-cYz"/>
+                                    <constraint firstItem="c0L-Nu-pfZ" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" id="j7o-xX-EtA"/>
+                                    <constraint firstItem="ii0-bP-1PK" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="lTZ-EK-tkN"/>
+                                    <constraint firstItem="MiM-a6-5Di" firstAttribute="top" secondItem="NIW-ET-nxm" secondAttribute="top" constant="30" id="liJ-bH-Fk9"/>
+                                    <constraint firstItem="0B3-01-prF" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="nV2-O3-yQf"/>
+                                    <constraint firstItem="jDQ-L1-f8n" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="nYL-OV-isc"/>
+                                    <constraint firstItem="vUF-Pr-D4Z" firstAttribute="leading" secondItem="0B3-01-prF" secondAttribute="trailing" constant="8" id="nbF-2W-P3R"/>
+                                    <constraint firstItem="Ke8-Rm-GPE" firstAttribute="centerY" secondItem="c8K-lc-EWL" secondAttribute="centerY" id="oxy-RO-fc1"/>
+                                    <constraint firstItem="2yp-aQ-Z6D" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="p2v-TD-7th"/>
+                                    <constraint firstItem="kJ6-Wr-D0g" firstAttribute="top" secondItem="MiM-a6-5Di" secondAttribute="bottom" constant="8" id="pNx-vN-LF8"/>
+                                    <constraint firstItem="hGF-Ta-vGF" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="q9D-KC-nt6"/>
+                                    <constraint firstItem="c8K-lc-EWL" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="qrH-a1-tlz"/>
+                                    <constraint firstItem="Kdy-q5-yEK" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="qtt-zL-2iW"/>
+                                    <constraint firstItem="Om3-rv-Reb" firstAttribute="top" secondItem="NdC-na-5PS" secondAttribute="bottom" constant="20" id="rSA-Ok-blT"/>
+                                    <constraint firstItem="q6I-aX-665" firstAttribute="height" secondItem="c8K-lc-EWL" secondAttribute="height" id="upt-QO-OtL"/>
+                                    <constraint firstItem="JG9-OG-zQr" firstAttribute="leading" secondItem="NIW-ET-nxm" secondAttribute="leading" constant="20" id="wtE-zX-ECy"/>
+                                    <constraint firstItem="ii0-bP-1PK" firstAttribute="leading" secondItem="vUF-Pr-D4Z" secondAttribute="trailing" constant="8" id="yJ1-I2-7Fh"/>
+                                    <constraint firstItem="5zl-fw-KuK" firstAttribute="centerX" secondItem="NIW-ET-nxm" secondAttribute="centerX" id="zxH-OR-LKe"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzP-b9-42c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAB-Id-S0K">
+                                        <rect key="frame" x="8" y="52" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Tch-36-lbD"/>
+                                            <constraint firstAttribute="width" secondItem="AAB-Id-S0K" secondAttribute="height" multiplier="1:1" id="uGh-ou-xjZ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chevron.left" catalog="system" symbolScale="default"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default" weight="medium">
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <action selector="backPressed:" destination="iG2-O8-7iO" eventType="touchUpInside" id="Rdz-oX-ZAE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design your workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-DT-wbS">
+                                        <rect key="frame" x="48" y="52" width="318" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kQ-LS-C3d">
+                                        <rect key="frame" x="0.0" y="99.666666666666671" width="414" height="0.3333333333333286"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="1p1-Km-VER"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zFD-DT-wbS" firstAttribute="leading" secondItem="AAB-Id-S0K" secondAttribute="trailing" id="2FB-qW-F6c"/>
+                                    <constraint firstItem="AAB-Id-S0K" firstAttribute="top" secondItem="HzP-b9-42c" secondAttribute="topMargin" id="2mr-kt-GYR"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="AAB-Id-S0K" secondAttribute="bottom" id="9Ge-Ez-wYa"/>
+                                    <constraint firstItem="zFD-DT-wbS" firstAttribute="centerX" secondItem="HzP-b9-42c" secondAttribute="centerX" id="Arz-4R-BOD"/>
+                                    <constraint firstItem="zFD-DT-wbS" firstAttribute="centerY" secondItem="AAB-Id-S0K" secondAttribute="centerY" id="UB3-Cf-35I"/>
+                                    <constraint firstItem="AAB-Id-S0K" firstAttribute="leading" secondItem="HzP-b9-42c" secondAttribute="leading" constant="8" id="gnz-bI-7x6"/>
+                                    <constraint firstAttribute="bottom" secondItem="3kQ-LS-C3d" secondAttribute="bottom" id="iB2-Ys-HyX"/>
+                                    <constraint firstItem="zFD-DT-wbS" firstAttribute="height" secondItem="AAB-Id-S0K" secondAttribute="height" id="q5y-ko-ePQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3kQ-LS-C3d" secondAttribute="trailing" id="ugd-Nx-Q4A"/>
+                                    <constraint firstItem="3kQ-LS-C3d" firstAttribute="leading" secondItem="HzP-b9-42c" secondAttribute="leading" id="y9M-NT-yvW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkD-sZ-naS">
+                                <rect key="frame" x="0.0" y="789" width="414" height="107"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pah-Dd-lTI">
+                                        <rect key="frame" x="30" y="8" width="354" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="cJb-Wn-6qX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Create Workout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pah-Dd-lTI" firstAttribute="leading" secondItem="PkD-sZ-naS" secondAttribute="leading" constant="30" id="5iO-SL-1Cf"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="pah-Dd-lTI" secondAttribute="bottom" constant="12" id="PFs-KS-ZPC"/>
+                                    <constraint firstItem="pah-Dd-lTI" firstAttribute="centerX" secondItem="PkD-sZ-naS" secondAttribute="centerX" id="fCH-Lt-oe6"/>
+                                    <constraint firstItem="pah-Dd-lTI" firstAttribute="top" secondItem="PkD-sZ-naS" secondAttribute="top" constant="8" id="jwb-MM-frG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XtH-u8-TJM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NIW-ET-nxm" secondAttribute="bottom" id="3kE-tk-shi"/>
+                            <constraint firstItem="NIW-ET-nxm" firstAttribute="centerX" secondItem="g2H-fh-mNR" secondAttribute="centerX" id="7s4-oN-0Z1"/>
+                            <constraint firstItem="HzP-b9-42c" firstAttribute="leading" secondItem="XtH-u8-TJM" secondAttribute="leading" id="DFl-gk-QnB"/>
+                            <constraint firstAttribute="bottom" secondItem="PkD-sZ-naS" secondAttribute="bottom" id="KBy-rv-if8"/>
+                            <constraint firstItem="NIW-ET-nxm" firstAttribute="top" secondItem="HzP-b9-42c" secondAttribute="bottom" id="OCQ-Dk-kSk"/>
+                            <constraint firstItem="NIW-ET-nxm" firstAttribute="trailing" secondItem="XtH-u8-TJM" secondAttribute="trailing" id="V0e-rx-UTV"/>
+                            <constraint firstItem="HzP-b9-42c" firstAttribute="trailing" secondItem="XtH-u8-TJM" secondAttribute="trailing" id="aSn-Aw-XTE"/>
+                            <constraint firstItem="PkD-sZ-naS" firstAttribute="centerX" secondItem="g2H-fh-mNR" secondAttribute="centerX" id="kRI-R8-nSZ"/>
+                            <constraint firstItem="PkD-sZ-naS" firstAttribute="leading" secondItem="XtH-u8-TJM" secondAttribute="leading" id="sev-YW-e9x"/>
+                            <constraint firstItem="NIW-ET-nxm" firstAttribute="leading" secondItem="XtH-u8-TJM" secondAttribute="leading" id="uj2-6r-PCR"/>
+                            <constraint firstItem="HzP-b9-42c" firstAttribute="top" secondItem="g2H-fh-mNR" secondAttribute="top" id="vyr-64-NxY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="AAB-Id-S0K" id="sKH-m6-ZzG"/>
+                        <outlet property="descTextView" destination="uFz-aP-H7L" id="u2Z-7b-rlw"/>
+                        <outlet property="doneButton" destination="pah-Dd-lTI" id="erf-Pu-SPF"/>
+                        <outlet property="footerContainerView" destination="PkD-sZ-naS" id="jbM-Yc-767"/>
+                        <outlet property="headerContainerView" destination="HzP-b9-42c" id="Yjx-ui-e7f"/>
+                        <outlet property="headerLabel" destination="zFD-DT-wbS" id="TId-kI-0aY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHS-zI-e2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750.7246376811595" y="162.72321428571428"/>
+        </scene>
+        <!--Workout Nav View-->
+        <scene sceneID="00V-69-cWK">
+            <objects>
+                <navigationController storyboardIdentifier="WorkoutNavView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="nDi-VC-bPt" customClass="WorkoutNavView" customModule="Fitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ER5-6o-30i">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8a5-qO-VtV" kind="relationship" relationship="rootViewController" id="Kfh-N2-Yje"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pv2-UZ-IGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257.97101449275362" y="163.39285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolt.heart" catalog="system" width="128" height="109"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="flame" catalog="system" width="108" height="128"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
+        <image name="repeat" catalog="system" width="128" height="99"/>
+        <image name="ruler" catalog="system" width="128" height="57"/>
+        <image name="scalemass" catalog="system" width="128" height="119"/>
+        <image name="speedometer" catalog="system" width="128" height="121"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+        <image name="wrench.and.screwdriver" catalog="system" width="128" height="120"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

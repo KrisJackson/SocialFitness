@@ -11,7 +11,9 @@ class WorkoutInfoLabel: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.font = .systemFont(ofSize: 18, weight: .semibold)
+        self.textColor = .darkGray
+        self.text = self.text?.uppercased()
+        self.font = .systemFont(ofSize: 12, weight: .bold)
     }
     
     required init?(coder aDecoder: NSCoder) {

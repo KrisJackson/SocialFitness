@@ -23,7 +23,7 @@ class WorkoutCell: UICollectionViewCell {
         self.backView.backgroundColor = .secondarySystemBackground
         
         // Configure name label
-        self.nameLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        self.nameLabel.font = .systemFont(ofSize: 16, weight: .bold)
         
     }
 }
